@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StackExchange.Redis.Extensions.Newtonsoft" Version="3.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="StackExchange.Redis.Extensions.Core">
+      <HintPath>..\..\..\..\..\Users\sercan.timocin\.nuget\packages\stackexchange.redis.extensions.core\3.4.0\lib\netstandard2.0\StackExchange.Redis.Extensions.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

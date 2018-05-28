@@ -1,0 +1,17 @@
+FROM microsoft/mssql-server-linux
+
+ENV SA_PASSWORD Your_password123
+ENV ACCEPT_EULA Y
+
+VOLUME /var/opt/mssql/data
+
+EXPOSE 8010:1433
+EXPOSE 8011:1434
+
+WORKDIR /app
+
+COPY Db_scripts.sql .
+COPY entrypoint.sh .
+
+RUN chmod +x ./entrypoint.sh
+CMD ./entrypoint.sh

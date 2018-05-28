@@ -1,0 +1,41 @@
+﻿@model Model.ConfigurationObject
+
+<html>
+<head>
+    <title>Ekle</title>
+</head>
+<body>
+
+    <p>Yeni Configurasyon Kaydı Ekleme</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-controller="Configuration" asp-action="Insert">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Type"></label>
+                <input asp-for="Type" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Value"></label>
+                <input asp-for="Value" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="IsActive"></label>
+                <input asp-for="IsActive" class="form-control" type="checkbox" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ApplicationName"></label>
+                <input asp-for="ApplicationName" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-default">Ekle</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
